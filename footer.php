@@ -1,4 +1,4 @@
-    <footer id="footer" class="quicksand">
+    <footer id="footer" class="quicksand u-uppercase">
       <nav class="left">
         <a  class="legalix" href="#">Legalix.com</a>
       </nav>

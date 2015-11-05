@@ -40,7 +40,7 @@ $margin-large = ($gutter * 5)
 
 $font-size-basic = 18px
 $font-leading-basic = 1.4
-$font-tracking-basic = 0.001em
+$font-tracking-basic = 0.003em
 
 $color-black-soft = rgb(14, 14, 14)
 $color-white-soft = rgb(253, 253, 253)
@@ -60,12 +60,14 @@ h1
   font-size: 3em
 
 h2
-  font-size: 2em
+  font-size: 2.7em
+  font-weight: normal
 
 h3
   font-size: 1.5em
 
 p
+  font-size: 0.95em
   margin-bottom: 1em
 
 
@@ -89,9 +91,20 @@ img
   height: auto
 
 body
-  margin: 20px
   border-right: 2px solid $color-black
   border-left: 2px solid $color-black
+  border: 20px solid $color-blue
+  border: 20px solid $color-blue
+  position: fixed
+  overflow: scroll
+  position: fixed
+  height: 100vh
+  width: 100vw
+  overflow: scroll
+
+.content
+  max-width: 800px
+  margin: 0 auto
   
 // BODY STYLES
 
@@ -100,6 +113,9 @@ body
 
 //the 100% widths are just so stylus can compile delete as desired
 
+#main-container
+  border-left: 2px solid $color-black
+  border-right: 2px solid $color-black
 
 
 // HEADER
@@ -107,15 +123,16 @@ body
 #header,
 #footer
   position: fixed
-  left: 20px
-  right: 20px
+  left: 0
+  right: 0
   height: 50px
+  margin: 0 20px
   border: 2px solid $color-black
   display: flex
   flex-direction: row
   justify-content: space-between
   align-items: center
-  text-transform: uppercase
+  background: $color-blue
 
   .left
     display: flex;
@@ -144,6 +161,7 @@ body
 // FOOTER
 #footer
   bottom: 20px
+  margin-top: 0
   font-size: 0.6em
   font-weight: bold
 
@@ -163,7 +181,20 @@ body
 
 // MAIN-CONTENT
 #main-content
-  display: none
+  padding: 50px 0
+
+// ABOUT
+.about-container
+  padding: 70px 0
+
+.about-container h2
+  text-align: center
+  margin-bottom: 30px
+  
+.about-container p
+  text-align: center
+  font-weight: bold
+  
 
 
 // MEDIA QUERIES

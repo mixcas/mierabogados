@@ -54,7 +54,7 @@
   <section id="main-container">
 
   <!-- start content -->
-  <header id="header" class="quicksand">
+  <header id="header" class="quicksand u-uppercase">
     <div class="left">
       <span class="logo">
         <span>M.</span><span>E.</span>
