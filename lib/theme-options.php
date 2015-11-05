@@ -103,25 +103,33 @@ class IGV_Admin {
 
 		// Set our CMB2 fields
 
+    // Contacto Email
 		$cmb->add_field( array(
-			'name' => __( 'Test Text', 'IGV' ),
+			'name' => __( 'E-mail Contacto', 'IGV' ),
 			'desc' => __( 'field description (optional)', 'IGV' ),
-			'id'   => $this->prefix . 'test_text',
+			'id'   => $this->prefix . 'contact_email',
 			'type' => 'text',
-			'default' => 'Default Text',
-		) );
+    ) );
 
-		$cmb->add_field( array(
-			'name'    => __( 'Test Color Picker', 'IGV' ),
-			'desc'    => __( 'field description (optional)', 'IGV' ),
-			'id'      => $this->prefix . 'test_colorpicker',
-			'type'    => 'colorpicker',
-			'default' => '#bada55',
-		) );
+    $cmb->add_field( array(
+      'name' => __( 'Test Text', 'IGV' ),
+      'desc' => __( 'field description (optional)', 'IGV' ),
+      'id'   => $this->prefix . 'test_text',
+      'type' => 'text',
+      'default' => 'Default Text',
+    ) );
 
-	}
+    $cmb->add_field( array(
+      'name'    => __( 'Test Color Picker', 'IGV' ),
+      'desc'    => __( 'field description (optional)', 'IGV' ),
+      'id'      => $this->prefix . 'test_colorpicker',
+      'type'    => 'colorpicker',
+      'default' => '#bada55',
+    ) );
 
-	/**
+  }
+
+  /**
 	 * Public getter method for retrieving protected/private variables
 	 * @since  0.1.0
 	 * @param  string  $field Field to retrieve
