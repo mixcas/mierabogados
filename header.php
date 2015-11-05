@@ -54,6 +54,18 @@
   <section id="main-container">
 
   <!-- start content -->
-  <header id="header">
-    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+  <header id="header" class="quicksand">
+    <div class="right">
+      <span class="logo">
+        <span>M.</span><span>E.</span>
+      </span>
+      <a class="title" href="#"><strong>Mier Esparza</strong> &#8226; Abogados</a>
+    </div>
+    
+    <nav class="left">
+      <a href="#">ABOUT</a>
+      <a href="#">ABOUT</a>
+      <a href="#">ABOUT</a>
+      <a href="#">ABOUT</a>
+    </nav>
   </header>
