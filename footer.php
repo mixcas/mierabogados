@@ -1,4 +1,10 @@
-    <footer id="footer">
+    <footer id="footer" class="quicksand">
+      <nav class="left">
+        <a  class="legalix" href="#">Legalix.com</a>
+      </nav>
+      <nav class="right">
+        <a href="#">Aviso de privacidad</a>
+      </nav>
     </footer>
 
   </section>

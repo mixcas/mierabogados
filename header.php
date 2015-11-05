@@ -55,14 +55,14 @@
 
   <!-- start content -->
   <header id="header" class="quicksand">
-    <div class="right">
+    <div class="left">
       <span class="logo">
         <span>M.</span><span>E.</span>
       </span>
       <a class="title" href="#"><strong>Mier Esparza</strong> &#8226; Abogados</a>
     </div>
     
-    <nav class="left">
+    <nav class="right">
       <a href="#">ABOUT</a>
       <a href="#">ABOUT</a>
       <a href="#">ABOUT</a>

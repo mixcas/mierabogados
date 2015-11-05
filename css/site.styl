@@ -104,9 +104,9 @@ body
 
 // HEADER
 
-#header
+#header,
+#footer
   position: fixed
-  top: 20px
   left: 20px
   right: 20px
   height: 50px
@@ -117,13 +117,16 @@ body
   align-items: center
   text-transform: uppercase
 
-  .right
+  .left
     display: flex;
     flex-direction: row;
     align-items: center;
 
   nav
     padding: 0 20px
+
+#header
+  top: 20px
 
 .logo
   font-size: 2em
@@ -137,7 +140,16 @@ body
 
 .title
   padding: 0 20px
-    
+
+// FOOTER
+#footer
+  bottom: 20px
+  font-size: 0.6em
+  font-weight: bold
+
+.legalix:before
+  content: '>'
+  margin-right: 7px
 
 // POSTS LOOP
 #posts
@@ -147,12 +159,6 @@ body
   width: 100%
 
 #pagination
-  width: 100%
-
-
-// FOOTER
-
-#footer
   width: 100%
 
 // MAIN-CONTENT
