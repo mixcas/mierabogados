@@ -2,41 +2,9 @@
 @import "helpers"
 @import "fonts"
 
-// GRID OF 12 90px COLUMNS WITH 16px GUTTER
-$cols = 12
-$col = 90px
-$gutter = 16px
-.container
-  margin: 0 auto
-  width: ($col * $cols)+($gutter * $cols)
-.row
-  clear: both
-.col
-  float: left
-  margin-left: ($gutter/2)
-  margin-right: ($gutter/2)
-  box-sizing: content-box
-for col in 1..$cols
-  .col{col}
-    width: ( col * $col ) + ( ( col - 1 ) * $gutter )
-
-// FLUID COLS
-.percent-col
-  float: left
-  box-sizing: content-box
-$pcols = 10
-for pcol in 1..$pcols
-  .into-{pcol}
-    width: ( 100% / pcol )
-
 // VARIABLES
 
 $golden-ratio = 1.61803398875
-
-$margin-small = ($gutter)
-$margin-tiny = ($gutter / 2)
-$margin-basic = ($gutter * 2)
-$margin-large = ($gutter * 5)
 
 $font-size-basic = 18px
 $font-leading-basic = 1.4
@@ -75,9 +43,9 @@ p
 
 a, a:active, a:visited
   color:inherit
-  transition:opacity .2s
+  transition: color .2s
   &:hover
-    opacity:.5
+    color: #fff
 
 
 // BASIC
@@ -102,6 +70,10 @@ body
   width: 100vw
   overflow: scroll
 
+.container
+  max-width: 980px
+  margin: 0 auto
+
 .content
   max-width: 800px
   margin: 0 auto
@@ -110,6 +82,34 @@ body
 
 .quicksand
   font-family: 'Quicksand', sans-serif
+
+.button-3d
+  display: inline-block
+  line-height: 1em
+  font-weight: bold
+  margin: 60px auto
+  border: 2px solid $color-black
+  padding: 18px
+  text-transform: uppercase
+  font-size: 1.2em
+  position: relative
+  background-color: #75cede
+  transition: background-color .2s
+
+  &:before
+    content: ''
+    width: 100%
+    height: 100%
+    position: absolute
+    border: 2px solid #231f20
+    top: 3px
+    left: -7px
+    z-index: -1
+    bottom: 0
+    box-sizing: content-box
+
+.button-3d:hover
+  background: #91d8e5
 
 //the 100% widths are just so stylus can compile delete as desired
 
@@ -123,6 +123,7 @@ body
 #header,
 #footer
   position: fixed
+  z-index: 100
   left: 0
   right: 0
   height: 50px
@@ -162,8 +163,13 @@ body
 #footer
   bottom: 20px
   margin-top: 0
-  font-size: 0.6em
+  font-size: 0.7em
   font-weight: bold
+
+  .right
+    border-left: 2px solid
+    line-height: 50px
+
 
 .legalix:before
   content: '>'
@@ -183,22 +189,86 @@ body
 #main-content
   padding: 50px 0
 
-// ABOUT
-.about-container
+  section:last-child
+    border-bottom: none
+
+// SIMPLE CONTAINER
+
+.simple-container
   padding: 70px 0
 
-.about-container h2
-  text-align: center
+.simple-container h2
   margin-bottom: 30px
-  
+
+// ABOUT
+
 .about-container p
-  text-align: center
   font-weight: bold
-  
+
+.areas-container,
+.posts-container
+  border-top: 2px solid $color-black
+  border-bottom: 2px solid $color-black
+
+  h2
+    padding: 40px
+    border-bottom: 2px solid $color-black
+
+.areas
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+
+.area
+  flex: 0 1 50%
+  border-bottom: 2px solid $color-black
+
+.area:nth-child(odd)
+  border-right: 2px solid $color-black
+
+.area:nth-child(even)
+  .area-content
+    float: right
+
+.area-content
+  padding: 50px 0
+  max-width: 400px
+
+.area-content h3
+  margin: 50px 0 30px
+
+// POSTS
+.grid-container
+  margin: 40px auto
+  display: flex
+  flex-flow: row
+  justify-content: space-between
+  flex-wrap: wrap
+  border-bottom: 2px solid $color-black
+
+.grid-container .post
+  flex: 0 1 296px
+  min-height: 390px
+  margin-bottom: 0.7em
+
+  .post-thumbnail
+    border: 2px solid $color-white
+
+  h3
+    font-size: 1.2em
+    margin: 1.1em 0 0.7em
+
+  p
+    font-size: 0.9em
+
+  & a:hover
+    h3
+      text-decoration: underline
+
 
 
 // MEDIA QUERIES
 
-@media screen and (max-width: ($col * $cols)+($gutter * $cols))
+//@media screen and (max-width: ($col * $cols)+($gutter * $cols))
   html
     width: 100%
