@@ -23,6 +23,8 @@ if($about)  {
 }
 ?>
 
+<hr />
+
 <?php
 // Areas Section
 $areas = new WP_Query( array(
@@ -57,6 +59,8 @@ if( $areas->have_posts() ) {
 <?php
 }
 ?>
+
+<hr />
 
 <?php
 // Contacto Section

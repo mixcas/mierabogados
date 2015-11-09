@@ -23,6 +23,8 @@ body
   font-size: $font-size-basic
   line-height: $font-leading-basic
   letter-spacing: $font-tracking-basic
+  display: flex
+  flex-direction: column
 
 h1
   font-size: 3em
@@ -37,6 +39,9 @@ h3
 p
   font-size: 0.95em
   margin-bottom: 1em
+
+hr
+  border-top: 2px solid $color-black
 
 
 // LINKS
@@ -116,6 +121,7 @@ body
 #main-container
   border-left: 2px solid $color-black
   border-right: 2px solid $color-black
+  flex: 1 1 auto
 
 
 // HEADER
@@ -220,9 +226,6 @@ body
 
 .areas-container,
 .posts-container
-  border-top: 2px solid $color-black
-  border-bottom: 2px solid $color-black
-
   h2
     padding: 40px
     border-bottom: 2px solid $color-black
@@ -278,14 +281,14 @@ body
     h3
       text-decoration: underline
 
-
 // PAGE
-.page
-  display: flex
 
-.page  #main-container
-  flex: 1 1 auto
-
+// Page: ABOUT
+.page .about-container
+  h2
+    display: none
+  .logo
+    margin-bottom: 60px
 
 // MEDIA QUERIES
 
