@@ -63,9 +63,11 @@
     </div>
     
     <nav class="right">
-      <a href="#">ABOUT</a>
-      <a href="#">ABOUT</a>
-      <a href="#">ABOUT</a>
-      <a href="#">ABOUT</a>
+      <ul>
+        <li><a href="<?php echo get_page_permalink_from_slug('about'); ?>">About</a></li>
+        <li><a href="<?php echo get_page_permalink_from_slug('about'); ?>">Áreas de Práctica</a></li>
+        <li><a href="<?php echo get_page_permalink_from_slug('blog'); ?>">Blog</a></li>
+        <li><a href="<?php echo get_page_permalink_from_slug('contacto'); ?>">Contacto</a></li>
+      </ul>
     </nav>
   </header>

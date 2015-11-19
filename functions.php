@@ -121,6 +121,11 @@ function numbered_pagination() {
 
 // UTILITY FUNCTIONS
 
+// Get page permalink from slug
+function get_page_permalink_from_slug($slug) {
+  return get_permalink( get_page_by_path( $slug ) );
+}
+
 // to replace file_get_contents
 function url_get_contents($Url) {
   if (!function_exists('curl_init')){

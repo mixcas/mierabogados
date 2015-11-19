@@ -152,18 +152,24 @@ body
 #header
   top: 20px
 
+  li
+    display: inline-block
+
   .right a
     font-size: 0.8em;
     line-height: 50px;
     font-weight: bold;
 
-  .right a:before
-    content: '•'
-    margin: 0 6px 0 0
-    display: inline-block
+  .right li
 
-  .right a:first-child:before
-    content: ''
+    &:before
+      line-height: 50px
+      content: counter(seccion, disc)
+      margin: 0 6px 0 0
+      display: inline-block
+
+    &:first-child:before
+      content: ''
 
 .logo
   font-size: 2em
