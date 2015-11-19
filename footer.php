@@ -3,7 +3,7 @@
         <a  class="legalix" href="#">Legalix.com</a>
       </nav>
       <nav class="right">
-        <a href="#">Aviso de privacidad</a>
+      <a href="<?php echo get_page_permalink_from_slug('aviso-de-privacidad') ?>">Aviso de privacidad</a>
       </nav>
     </footer>
 
