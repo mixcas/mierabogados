@@ -11,7 +11,6 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
 query_posts( array(
   'post_type' => 'post',
-  'posts_per_page' => 12,
   'post_status' => 'publish',
   'paged' => $paged
   
@@ -41,8 +40,8 @@ if( have_posts() ) {
   }
   ?>
     </div>
-    <div class="container u-align-center">
-    <?php get_template_part('partials/pagination'); ?>
+    <div class="container u-align-center numbered-pagination quicksand">
+    <?php numbered_pagination(); ?>
     </div>
   </section>
 <?php

@@ -122,8 +122,6 @@ if( have_posts() ) {
 }
 ?>
 
-  <?php get_template_part('partials/pagination'); ?>
-
 <!-- end main-content -->
 
 </main>

@@ -48,7 +48,7 @@ hr
 
 a, a:active, a:visited
   color:inherit
-  transition: color .2s
+  transition: color 100ms
   &:hover
     color: #fff
 
@@ -106,7 +106,7 @@ body
     width: 100%
     height: 100%
     position: absolute
-    border: 2px solid #231f20
+    border: 2px solid $color-black
     top: 3px
     left: -7px
     z-index: -1
@@ -204,6 +204,14 @@ body
 #pagination
   width: 100%
 
+.numbered-pagination
+  font-weight: bold
+  margin: 20px auto 40px
+
+.page-numbers
+  margin: 0 4px
+  font-size: 1.3em
+
 // MAIN-CONTENT
 #main-content
   padding: 50px 0
@@ -271,7 +279,7 @@ body
     border: 2px solid $color-white
 
   h3
-    font-size: 1.2em
+    font-size: 1.3em
     margin: 1.1em 0 0.7em
 
   p
