@@ -41,7 +41,8 @@ h3
 
 p
   font-size: 0.95em
-  margin-bottom: 1em
+  margin-bottom: 1.5em
+  line-height: 1.6
 
 hr
   border-top: 2px solid $color-black
@@ -204,11 +205,27 @@ body
   margin-right: 7px
 
 // POSTS LOOP
-#posts
+.posts
   width: 100%
+
+  h1
+    text-transform: uppercase
+    font-size: 2.4em
+    font-family: 'Quicksand', sans-serif
+    margin-bottom: 0.25em
+
+  header
+    border-bottom: 2px solid $color-black
+    margin-bottom: 2.3em
 
 .post
   width: 100%
+
+.date
+  font-size: 0.9em
+  font-weight: bold
+  font-family: 'Quicksand', sans-serif
+  margin-bottom: 0.7em
 
 #pagination
   width: 100%
@@ -298,8 +315,12 @@ body
     h3
       text-decoration: underline
 
-// PAGE
+// SINGLE
+.single .posts,
+.page .posts
+  padding: 6.6em 0
 
+// PAGE
 // Page: ABOUT
 .page .about-container
   h2
