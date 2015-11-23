@@ -223,7 +223,8 @@ body
 .post
   width: 100%
 
-.date
+.date,
+.post-info
   font-size: 0.9em
   font-weight: bold
   font-family: 'Quicksand', sans-serif
@@ -329,8 +330,28 @@ body
 .single-featured
   margin-bottom: 2.3em
 
+.taxonomy-link
+  text-transform: uppercase
+
+  &:before
+    display: inline-block
+    margin: 0 6px 0 0
+    content: counter(seccion, disc)
+
+.tags
+  margin-bottom: 1.2em
+
+  .taxonomy-link:before
+    display: none
+
+  .taxonomy-link:after
+    content: ','
+
+  .taxonomy-link:last-child:after
+    display: none
+
 .post-content
-  margin-bottom: 2.3em
+  margin-bottom: 1.2em
   color: $color-light-black
 
   a
