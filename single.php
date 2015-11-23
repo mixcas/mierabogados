@@ -22,9 +22,10 @@ if( have_posts() ) {
         <div class="post-info">
           <span><?php the_date('d \/ m \/ Y'); ?></span>
     <?php
-      $categories = get_terms('category');
-      foreach( $categories as $category ) {
-        $category_link = get_term_link($category);
+      $categories = wp_get_post_categories($post->ID, 'category');
+      foreach( $categories as $category_id ) {
+        $category = get_category($category_id);
+        $category_link = get_term_link($category->term_id, 'category');
     ?>
       <span class="taxonomy-link"><a href="<?php echo $category_link; ?>"><?php echo $category->name; ?></a></span>
     <?php
@@ -44,11 +45,12 @@ if( have_posts() ) {
 
       <div class="post-info tags">
     <?php
-      $tags = get_terms('post_tag');
-      foreach( $tags as $tag ) {
-        $tag_link = get_term_link($tag);
+      $tags = wp_get_post_tags($post->ID, 'post_tag');
+      foreach( $tags as $tag_id ) {
+        $tag = get_tag($tag_id);
+        $tag_link = get_term_link($tag->term_id, 'post_tag');
     ?>
-        <span class="taxonomy-link"><a href="<?php echo $tag_link; ?>"><?php echo $tag->name; ?></a></span>
+      <span class="taxonomy-link"><a href="<?php echo $tag_link; ?>"><?php echo $tag->name; ?></a></span>
     <?php
       }
     ?>
