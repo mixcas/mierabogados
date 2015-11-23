@@ -100,7 +100,7 @@ if( have_posts() ) {
           )); ?>
           <h3 class="quicksand"><?php the_title(); ?></h3>
         </a>
-          <?php the_content(); ?>
+          <?php the_excerpt(); ?>
       </div>
     </article>
   <?php
