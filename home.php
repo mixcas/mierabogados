@@ -30,6 +30,8 @@ if($about)  {
 $areas = new WP_Query( array(
   'post_type'   => 'area',
   'posts_per_page' => '4',
+  'order' => 'DESC',
+  'order_by' => 'menu_order',
 ) );
 
 if( $areas->have_posts() ) {
