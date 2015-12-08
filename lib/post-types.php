@@ -52,7 +52,7 @@ function register_cpt_areas() {
         'has_archive' => true,
         'query_var' => true,
         'can_export' => true,
-        'rewrite' => true,
+        'rewrite' => array('slug' => 'areas'),
         'capability_type' => 'post'
     );
 
