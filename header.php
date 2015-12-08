@@ -59,7 +59,7 @@
       <span class="logo">
         <span>M.</span><span>E.</span>
       </span>
-      <a class="title" href="#"><strong>Mier Esparza</strong> &#8226; Abogados</a>
+      <a class="title" href="<?php echo esc_url( home_url( '/' ) ); ?>"><strong>Mier Esparza</strong> &#8226; Abogados</a>
     </div>
     
     <nav class="right">
