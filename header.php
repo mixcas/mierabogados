@@ -49,6 +49,7 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<?php get_template_part('partials/facebook-sdk'); ?>
 <!--[if lt IE 9]><p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p><![endif]-->
 
   <section id="main-container">

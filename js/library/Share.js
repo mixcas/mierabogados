@@ -10,4 +10,3 @@ Share = {
     return true;
   }
 }
-
