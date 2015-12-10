@@ -55,7 +55,7 @@ if( $areas->have_posts() ) {
   ?>
     </div>
     <div class="container u-align-center">
-      <a class="button-3d quicksand" href="#">Más Áreas</a>
+      <a class="button-3d quicksand" href="<?php echo get_post_type_archive_link('area'); ?>">Más Áreas</a>
     </div>
   </section>
 <?php
@@ -110,7 +110,7 @@ if( have_posts() ) {
   ?>
     </div>
     <div class="container u-align-center">
-      <a class="button-3d quicksand" href="#">Más Posts</a>
+      <a class="button-3d quicksand" href="<?php echo get_page_permalink_from_slug('blog'); ?>">Más Posts</a>
     </div>
   </section>
 <?php
