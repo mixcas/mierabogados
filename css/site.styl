@@ -31,6 +31,22 @@ body
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
 
+  &:before,
+  &:after
+    content: ''
+    width: 100%
+    height: 20px
+    background: $color-blue
+    position: fixed
+    z-index: 200
+    
+  &:before
+    top: 0
+
+  &:after
+    bottom: 0
+
+
 h1
   font-size: 3em
 
@@ -73,13 +89,6 @@ body
   border-right: 2px solid $color-black
   border-left: 2px solid $color-black
   border: 20px solid $color-blue
-  border: 20px solid $color-blue
-  position: fixed
-  overflow: scroll
-  position: fixed
-  height: 100vh
-  width: 100vw
-  overflow: scroll
 
 .container
   max-width: 980px
