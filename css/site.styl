@@ -91,7 +91,8 @@ body
   border: 20px solid $color-blue
 
 .container
-  max-width: 980px
+  max-width: 1000px
+  padding: 0 20px
   margin: 0 auto
 
 .content
@@ -282,6 +283,8 @@ body
   flex-wrap: wrap
 
 .area
+  display: flex
+  flex-direction: row
   flex: 0 1 50%
   border-bottom: 2px solid $color-black
 
@@ -289,8 +292,9 @@ body
   border-right: 2px solid $color-black
 
 .area:nth-child(even)
+  justify-content: flex-end
+
   .area-content
-    float: right
     padding: 50px 0 50px 30px
 
 .area-content
@@ -332,7 +336,7 @@ body
 // SINGLE
 .single
   .container
-    max-width: 800px
+    max-width: 840px
 
   .post-content
     margin-bottom: 1.2em
@@ -359,7 +363,7 @@ body
 
 .single .posts,
 .page .posts
-  padding: 6.6em 0
+  padding: 6.6em 20px
 
 .single-featured
   margin-bottom: 2.3em
@@ -437,7 +441,48 @@ body
 // MEDIA QUERIES
 
 //@media screen and (max-width: ($col * $cols)+($gutter * $cols))
-  html
-    width: 100%
+//  html
+//    width: 100%
 
+@media screen and (max-width: 900px)
+  .area
+    flex: 1 1 100%
+
+  .area:nth-child(odd),
+  .area:nth-child(even)
+    border-right: none
+    border-left: none
+    justify-content: center
+
+    .area-content
+      padding: 50px 0
+      max-width: 100%
+      text-align: center
+
+@media screen and (max-width: 675px)
+
+  body
+    font-size: 16px
+
+  .grid-container
+    .post
+      margin: 0 auto
+
+  .single
+    .container
+      h1
+        font-size: 1.5em
+      img
+        max-width: 100%
+
+  .button-3d
+    font-size: 0.8em
+
+  .share-bar
+    font-size: 0.6em
+
+  #footer
+    .right
+      display: none
+    
 @import "wordpress"
