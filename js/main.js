@@ -3,5 +3,9 @@
 
 jQuery(document).ready(function () {
   'use strict';
-  l('Hola Globie');
+
+  $('#mobile-toggle').on('click', function(event) {
+    event.preventDefault();
+    $('#mobile-menu ul').toggleClass('on');
+  });
 });

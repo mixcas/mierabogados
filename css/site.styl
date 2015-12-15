@@ -201,6 +201,30 @@ body
 .title
   padding: 0 20px
 
+#mobile-menu
+  display: none
+
+  ul
+    position: absolute
+    border: 2px solid $color-black
+    background: $color-blue
+    top: -2px
+    right: -2px
+    padding: 40px 20px
+    max-width: 250px
+    font-weight: bold
+
+    &.on
+      display: block
+
+  li
+    display: block
+    margin-bottom: 10px
+
+#mobile-toggle
+  svg
+    fill: $color-black
+
 // FOOTER
 #footer
   bottom: 20px
@@ -365,8 +389,7 @@ body
     img
       max-width: 710px
 
-.single .posts,
-.page .posts
+.single article
   padding: 6.6em 20px
 
 .single-featured
@@ -523,8 +546,21 @@ body
   #footer
     margin: 0 10px
 
+  #header
+    .right,
+    .title
+      display: none
   #footer
     .right
       display: none
     
+  #mobile-menu
+    display: block
+    ul
+      display: none
+
+  #mobile-toggle
+    position: relative
+    z-index: 20
+
 @import "wordpress"

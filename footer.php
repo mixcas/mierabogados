@@ -1,6 +1,6 @@
     <footer id="footer" class="quicksand u-uppercase">
       <nav class="left">
-        <a  class="legalix" href="#">Legalix.com</a>
+        <a  class="legalix" href="http://www.legalix.com/" target="_blank">Legalix.com</a>
       </nav>
       <nav class="right">
       <a href="<?php echo get_page_permalink_from_slug('aviso-de-privacidad') ?>">Aviso de privacidad</a>
