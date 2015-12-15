@@ -30,7 +30,7 @@ if( function_exists( 'add_image_size' ) ) {
 
   add_image_size( 'name', 199, 299, true );
   add_image_size( 'home-thumb', 296, 196, true );
-  add_image_size( 'single-featured', 800, 99999, true );
+  add_image_size( 'single-featured', 800, 99999, false );
 }
 
 // Register Nav Menus
