@@ -94,7 +94,7 @@ if( have_posts() ) {
   while( have_posts() ) {
     the_post();
   ?>
-    <article class="post" id="post-<?php the_ID() ?>">
+    <article class="post u-cf" id="post-<?php the_ID() ?>">
       <div class="post-content">
         <a href="<?php the_permalink(); ?>">
           <?php the_post_thumbnail('home-thumb', array(

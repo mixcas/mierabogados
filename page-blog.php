@@ -15,6 +15,7 @@ query_posts( array(
   'paged' => $paged
   
 ));
+
 // Blog Section
 if( have_posts() ) {
 ?>
@@ -25,7 +26,7 @@ if( have_posts() ) {
   while( have_posts() ) {
     the_post();
   ?>
-    <article class="post" id="post-<?php the_ID() ?>">
+    <article class="post u-cf" id="post-<?php the_ID() ?>">
       <div class="post-content">
         <a href="<?php the_permalink(); ?>">
           <?php the_post_thumbnail('home-thumb', array(
@@ -33,15 +34,15 @@ if( have_posts() ) {
           )); ?>
           <h3 class="quicksand"><?php the_title(); ?></h3>
         </a>
-          <?php the_content(); ?>
+          <?php the_excerpt(); ?>
       </div>
     </article>
   <?php
   }
   ?>
     </div>
-    <div class="container u-align-center numbered-pagination quicksand">
-    <?php numbered_pagination(); ?>
+    <div class="container u-align-center">
+      <a class="button-3d quicksand" href="<?php echo get_page_permalink_from_slug('blog'); ?>">Más Posts</a>
     </div>
   </section>
 <?php
